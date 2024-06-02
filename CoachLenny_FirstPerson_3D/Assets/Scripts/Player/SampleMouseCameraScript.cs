@@ -30,13 +30,22 @@ public class SampleMouseCameraCameraScript : MonoBehaviour
         //Set the X Mouse Rotation to minus equal the Y axis of the Mouse Input multiplied by the Sensitivity
         MouseRotationX -= MouseInput.y * Sensitivity;
 
-        MouseInput.y = Mathf.Clamp(MouseInput.y, 90f ,90f);
+        ///Set the Y of the MouseInput to equal Mathf.Clamp(). within the parameter place the MouseRotationX
+        ///and place the min and max value to limit the camera rotation
+        MouseInput.y = Mathf.Clamp(MouseRotationX, 90f ,90f);
 
+        ///Set the rotation of the transform to include the MouseInput multiplied by the Sensitivity in the Y column
+        ///leave the X, and Z at 0
         transform.Rotate(0f, MouseInput.x * Sensitivity, 0f);
 
+        ///Set the Player Camera's local rotation to equal Quaternion.Euler()
+        ///In the parameters besure to leave the Y, and Z column at 0 and add the Mouse Rotation X variable to the X column
         PlayerCamera.transform.localRotation = Quaternion.Euler(MouseRotationX,0f,0f);
 
+        //Set the sensitivity to be equal to the public method of the SamplePlayerObjectScript MouseCameraSpeed()
         Sensitivity = Player.MouseCameraSpeed();
+
+        //Constantly have the visiblity of the cursor to be false;
         Cursor.visible = false;
 
     }
