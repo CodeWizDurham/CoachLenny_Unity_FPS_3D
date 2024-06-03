@@ -27,10 +27,14 @@ public class SampleBookShelfScript : MonoBehaviour, SampleIInteractable
     //Custom Method responsible for placing down items
     public void PlaceThisObject()
     {
-        //Sets public variable PickedUp to false
-        pickUpScript.PickedUp = false;
+        //if pickedup is true
+        if (pickUpScript.PickedUp)
+        {
+            //Sets public variable PickedUp to false
+            pickUpScript.PickedUp = false;
+            //Set the Object position to the location position
+            Object.transform.position = Location.position;
 
-        //Set the Object position to the location position
-        Object.transform.position = Location.position;
+        }
     }
 }
