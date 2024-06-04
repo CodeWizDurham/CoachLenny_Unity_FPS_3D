@@ -20,49 +20,49 @@ public class SampleInteractScript : MonoBehaviour
     /// This built in method is responsible for checking the moment the trigger
     /// collider comes in contact with another collider
     /// </summary>
-    private void OnTriggerEnter(Collider other)
-    {
-        //Assing the Interactable Object Variable to the collision parameter variable
-        InteractableObject = other;
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    //Assing the Interactable Object Variable to the collision parameter variable
+    //    InteractableObject = other;
 
-        //If other game object has the same tag as Interactable
-        if (other.gameObject.CompareTag("Interactable"))
-        {
-            //set can interact variable to be true
-            canInteract = true;
-        }
-        else
-        {            
-            //set can interact variable to be false
-            canInteract = false;
-        }
-    }
+    //    //If other game object has the same tag as Interactable
+    //    if (other.gameObject.CompareTag("Interactable"))
+    //    {
+    //        //set can interact variable to be true
+    //        canInteract = true;
+    //    }
+    //    else
+    //    {            
+    //        //set can interact variable to be false
+    //        canInteract = false;
+    //    }
+    //}
     
-    //Called when the trigger collider stays in contact with another collider
-    private void OnTriggerStay(Collider other)
-    {
-        //Assing the Interactable Object Variable to the collision parameter variable
-        InteractableObject = other;
+    ////Called when the trigger collider stays in contact with another collider
+    //private void OnTriggerStay(Collider other)
+    //{
+    //    //Assing the Interactable Object Variable to the collision parameter variable
+    //    InteractableObject = other;
 
-        //If other game object has the same tag as Interactable
-        if (other.gameObject.CompareTag("Interactable"))
-        {
-            //set can interact variable to be true
-            canInteract = true;
-        }
-        else
-        {
-            //set can interact variable to be false
-            canInteract = false;
-        }
-    }
+    //    //If other game object has the same tag as Interactable
+    //    if (other.gameObject.CompareTag("Interactable"))
+    //    {
+    //        //set can interact variable to be true
+    //        canInteract = true;
+    //    }
+    //    else
+    //    {
+    //        //set can interact variable to be false
+    //        canInteract = false;
+    //    }
+    //}
 
-    //Called when the trigger collider leaves contact with another collider
-    private void OnTriggerExit(Collider other)
-    {
-        //set can interact variable to be false
-        canInteract = false;
-    }
+    ////Called when the trigger collider leaves contact with another collider
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    //set can interact variable to be false
+    //    canInteract = false;
+    //}
 
     private void Update()
     {
