@@ -66,8 +66,9 @@ public class SampleInteractScript : MonoBehaviour
 
     private void Update()
     {
+        //Calls the DrawDetector method
         DrawDetector();
-
+        //Create a var variable and set it to equal Interactable Object variable and do .GetComponent of The interface for interaction
         var Obj = InteractableObject.GetComponent<SampleIInteractable>();
 
         if (Input.GetKeyDown(interactKeyCode) && canInteract)
