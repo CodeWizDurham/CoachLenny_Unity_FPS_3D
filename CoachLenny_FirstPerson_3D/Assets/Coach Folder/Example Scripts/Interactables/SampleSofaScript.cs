@@ -40,7 +40,7 @@ public class SampleSofaScript : MonoBehaviour, SampleIInteractable
             //Place the object in the location of the SitAt variable and set the transform.forward
             //to equal SitAt variables transform.forward
             PlaceThisObject.transform.position = SitAt.position;
-            PlaceThisObject.transform.forward = SitAt.forward;
+            PlaceThisObject.transform.forward = -SitAt.forward;
 
             //Disable the movement script so the player can't move while being seated
             CancelThisScript.enabled = false;
