@@ -17,7 +17,7 @@ public class SampleMouseCameraCameraScript : MonoBehaviour
     private float Sensitivity;
 
     //This variable stores information for the exact Axis the camera will look on, exp: "Mouse X" or "Mouse Y" Axises
-    private Vector3 MouseInput;
+    private Vector2 MouseInput;
 
     //This variable stores information for the value of the X axis rotation of the camera
     private float MouseRotationX;
