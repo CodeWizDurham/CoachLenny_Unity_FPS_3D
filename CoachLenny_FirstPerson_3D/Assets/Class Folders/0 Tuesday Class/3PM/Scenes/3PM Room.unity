@@ -319,6 +319,7 @@ GameObject:
   - component: {fileID: 154843255}
   - component: {fileID: 154843254}
   - component: {fileID: 154843253}
+  - component: {fileID: 154843256}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -444,6 +445,19 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &154843256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154843251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f1a8738ad90f444bd277be880f8b76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerCamera: {fileID: 0}
 --- !u!1001 &184208667
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3655,8 +3669,9 @@ GameObject:
   - component: {fileID: 1966199254}
   - component: {fileID: 1966199253}
   - component: {fileID: 1966199252}
+  - component: {fileID: 1966199257}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Tues-3PM-Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3732,7 +3747,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 7d1879ab86dc8c249b8dca9459d77c07, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3778,6 +3793,19 @@ Transform:
   - {fileID: 154843252}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1966199257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966199249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5936ca148a3627f4384fc675e72061ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
 --- !u!1 &1968919645 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 20855033514226770, guid: bfa974a01b4cbd94eb18f3e7956f9aca, type: 3}

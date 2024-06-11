@@ -17,13 +17,15 @@ public class FIVEPMMovementScript : MonoBehaviour
             transform.Translate(transform.forward * speed * Time.deltaTime);
         }
 
-        /// Challenge
-        /// Create key inputs for all four directions
-        /// Use the example code above to recreate the movement and remember positive is right and up and forward
-        /// Negavtive is down and left and backwards
-
         //If I press the A key
         //If I press the D key
         //If I press the S key
+
+        /// Challenge
+        /// Create key inputs for all four directions
+        /// Use the example code above to recreate the movement and remember: 
+        /// Positive is: right, up, and forward
+        /// Negavtive is: left, down, and backwards
+        
     }
 }
