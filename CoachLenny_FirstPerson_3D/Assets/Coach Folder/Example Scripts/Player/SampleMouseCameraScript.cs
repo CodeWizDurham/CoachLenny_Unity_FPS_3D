@@ -35,7 +35,7 @@ public class SampleMouseCameraCameraScript : MonoBehaviour
         MouseInput.y = Mathf.Clamp(MouseRotationX, 90f ,90f);
 
         ///Set the rotation of the transform to include the MouseInput multiplied by the Sensitivity in the Y column
-        ///leave the X, and Z at 0
+        ///leave the X, and Z at 0k
         transform.Rotate(0f, MouseInput.x * Sensitivity, 0f);
 
         ///Set the Player Camera's local rotation to equal Quaternion.Euler()

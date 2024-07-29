@@ -1180,7 +1180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6225c5360942d374ba3986e0a6f8a2a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 3
 --- !u!1001 &749930913
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2391,6 +2391,7 @@ GameObject:
   - component: {fileID: 1453471052}
   - component: {fileID: 1453471051}
   - component: {fileID: 1453471050}
+  - component: {fileID: 1453471053}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -2516,6 +2517,20 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1453471053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453471048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1af4ab862b5bc04484d518035c743a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerCamera: {fileID: 1453471052}
+  Sensitivity: 2
 --- !u!1001 &1505498906
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FIVEPMMouseCameraScript : MonoBehaviour
+public class FIVEPMMouseCamera : MonoBehaviour
 {
+
     //This variable stores data for the Main Camera
     public Camera PlayerCamera;
 

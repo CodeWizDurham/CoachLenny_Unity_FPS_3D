@@ -14,7 +14,7 @@ public class THREEPMMovementScript : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             //Move my player forward at a speed of 10f by the second
-            transform.Translate(transform.forward * speed * Time.deltaTime);
+            transform.Translate(Vector3.forward * speed * Time.deltaTime);
         }
 
         /// Challenge

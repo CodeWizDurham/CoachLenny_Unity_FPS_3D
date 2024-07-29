@@ -25,7 +25,7 @@ public class SampleReticleScript : MonoBehaviour
         else //Else meaning if it is not true
         {
             //keep our color white
-            MyReticleImage.color = Color.white;
+           MyReticleImage.color = Color.white;
         }
     }
 

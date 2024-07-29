@@ -14,18 +14,22 @@ public class FIVEPMMovementScript : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             //Move my player forward at a speed of 10f by the second
-            transform.Translate(transform.forward * speed * Time.deltaTime);
+            transform.Translate(Vector3.forward * speed * Time.deltaTime);
         }
 
         //If I press the A key
         //If I press the D key
+
         //If I press the S key
+        if (Input.GetKey(KeyCode.S))
+        {
+
+        }
 
         /// Challenge
         /// Create key inputs for all four directions
         /// Use the example code above to recreate the movement and remember: 
-        /// Positive is: right, up, and forward
-        /// Negavtive is: left, down, and backwards
+
         
     }
 }

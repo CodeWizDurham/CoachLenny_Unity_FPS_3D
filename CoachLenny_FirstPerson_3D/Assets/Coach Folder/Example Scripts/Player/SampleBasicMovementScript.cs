@@ -14,36 +14,36 @@ public class SampleBasicMovementScript : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             //Move my player forward at a speed of 10f by the second
-            transform.Translate(transform.forward * speed * Time.deltaTime);
+            transform.Translate(Vector3.forward * speed * Time.deltaTime);
         }
 
         //If I press the S key
         if (Input.GetKey(KeyCode.S))
         {
             //Move my player backward at a speed of 10f by the second
-            transform.Translate(transform.forward * -1 * speed * Time.deltaTime);
+            transform.Translate(Vector3.back *  speed * Time.deltaTime);
         }
 
         //If I press the D key
         if (Input.GetKey(KeyCode.D))
         {
             //Move my player right at a speed of 10f by the second
-            transform.Translate(transform.right * speed * Time.deltaTime);
+            transform.Translate(Vector3.right * speed * Time.deltaTime);
         }
 
         //If I press the A key
         if (Input.GetKey(KeyCode.A))
         {
             //Move my player left at a speed of 10f by the second
-            transform.Translate(transform.right * -1 * speed * Time.deltaTime);
+            transform.Translate(Vector3.left * speed * Time.deltaTime);
         }
 
 
-        /// Challenge
+        /// Challenge # 1
         /// Create key inputs for all four directions
         /// Use the example code above to recreate the movement and remember: 
-        /// Positive is: right, up, and forward
-        /// Negavtive is: left, down, and backwards
+        /// Challenge # 2 
+        /// 
 
     }
 }

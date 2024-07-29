@@ -16,53 +16,8 @@ public class SampleInteractScript : MonoBehaviour
     //this variable is for keeping track of what key we are assigning to be our interact button
     public KeyCode interactKeyCode;
 
-    ///<summary>
-    /// This built in method is responsible for checking the moment the trigger
-    /// collider comes in contact with another collider
-    /// </summary>
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    //Assing the Interactable Object Variable to the collision parameter variable
-    //    InteractableObject = other;
-
-    //    //If other game object has the same tag as Interactable
-    //    if (other.gameObject.CompareTag("Interactable"))
-    //    {
-    //        //set can interact variable to be true
-    //        canInteract = true;
-    //    }
-    //    else
-    //    {            
-    //        //set can interact variable to be false
-    //        canInteract = false;
-    //    }
-    //}
-    
-    ////Called when the trigger collider stays in contact with another collider
-    //private void OnTriggerStay(Collider other)
-    //{
-    //    //Assing the Interactable Object Variable to the collision parameter variable
-    //    InteractableObject = other;
-
-    //    //If other game object has the same tag as Interactable
-    //    if (other.gameObject.CompareTag("Interactable"))
-    //    {
-    //        //set can interact variable to be true
-    //        canInteract = true;
-    //    }
-    //    else
-    //    {
-    //        //set can interact variable to be false
-    //        canInteract = false;
-    //    }
-    //}
-
-    ////Called when the trigger collider leaves contact with another collider
-    //private void OnTriggerExit(Collider other)
-    //{
-    //    //set can interact variable to be false
-    //    canInteract = false;
-    //}
+    //
+    public float length;
 
     private void Update()
     {
@@ -71,8 +26,12 @@ public class SampleInteractScript : MonoBehaviour
         //Create a var variable and set it to equal Interactable Object variable and do .GetComponent of The interface for interaction
         var Obj = InteractableObject.GetComponent<SampleIInteractable>();
 
+        //If I press the Interact button DOWN and can interact with other objects
         if (Input.GetKeyDown(interactKeyCode) && canInteract)
         {
+            //Set is interacting to be true
+            //If I am interacting with an object the call on the IInteractable Interact Method
+            //Set is interacting to be false
             isInteracting = true;
             if (isInteracting)
             {
@@ -83,15 +42,15 @@ public class SampleInteractScript : MonoBehaviour
         }
     }
 
+    //A custom method created for detecting Interacatable objects
     public void DrawDetector()
     {
+        //Create a Ray variable and have it start from the player, and facing forward
         Ray detector = new Ray(transform.position, transform.forward);
 
-        if (Physics.Raycast(detector, out RaycastHit hit, 200f))
+        //If my Raycast
+        if (Physics.Raycast(detector, out RaycastHit hit, length))
         {
-            Debug.DrawRay(transform.position, transform.forward, Color.yellow);
-            print("I HIT : " + hit.collider.name);
-
             InteractableObject = hit.collider;
 
             if (hit.collider.gameObject.CompareTag("Interactable"))
@@ -103,6 +62,11 @@ public class SampleInteractScript : MonoBehaviour
                 canInteract = false;
             }
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawLine(transform.position, transform.forward);
     }
 
 }
