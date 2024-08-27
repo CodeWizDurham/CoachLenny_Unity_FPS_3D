@@ -11,6 +11,7 @@ public class SampleInteractScript : MonoBehaviour
     public bool isInteracting;
 
     //This variable is for keeping track of what object we are looking at !
+    //This can be public or private
     private Collider InteractableObject;
 
     //this variable is for keeping track of what key we are assigning to be our interact button
