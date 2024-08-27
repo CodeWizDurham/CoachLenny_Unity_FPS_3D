@@ -52,6 +52,7 @@ public class SampleInteractScript : MonoBehaviour
         //If my Raycast
         if (Physics.Raycast(detector, out RaycastHit hit, length))
         {
+        //Set the Interactable object variable to equal the collider the Raycast "hit"
             InteractableObject = hit.collider;
 
             if (hit.collider.gameObject.CompareTag("Interactable"))
